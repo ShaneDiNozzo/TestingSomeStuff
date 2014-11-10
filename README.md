@@ -1,4 +1,4 @@
 TestingSomeStuff
 ================
 
-Testing Version Control in Android Atudio
+Testing Version Control in Android Studio
