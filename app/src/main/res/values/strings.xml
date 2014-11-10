@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TTI Calculator TestApp</string>
+    <string name="app_name">TTI Kalkulátor TesztApp</string>
     <string name="szamol_gomb">Kiszámít</string>
     <string name="meter">(m)</string>
     <string name="kilogramm">(kg)</string>
-    <string name="add_meg_a_magassagot">Add meg a magasságot:</string>
-    <string name="add_meg_a_sulyt">Add meg a súlyt:</string>
+    <string name="add_meg_a_magassagot">Add meg a magasságot méterben:</string>
+    <string name="add_meg_a_sulyt">Add meg a súlyt kilogrammban:</string>
 
 </resources>

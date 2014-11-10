@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI Calculator TestApp</string>
+    <string name="szamol_gomb">Calculate</string>
+    <string name="meter">(m)</string>
+    <string name="kilogramm">(kg)</string>
+    <string name="add_meg_a_magassagot">Enter height in meters:</string>
+    <string name="add_meg_a_sulyt">Enter weight in kilogramms:</string>
+</resources>
