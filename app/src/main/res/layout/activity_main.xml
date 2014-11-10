@@ -16,17 +16,17 @@
 
         <TextView
             android:layout_marginBottom="8dp"
-            android:textSize="18sp"
-            android:paddingStart="25dp"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
             android:labelFor="@+id/magassag"
-            android:text="@string/add_meg"
+            android:text="@string/add_meg_a_magassagot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <EditText
             android:textStyle="italic"
-            android:textSize="16sp"
-            android:hint="@string/add_meg"
+            android:textSize="25sp"
+            android:hint="@string/meter"
             android:id="@id/magassag"
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
@@ -39,17 +39,17 @@
 
         <TextView
             android:layout_marginBottom="8dp"
-            android:textSize="18sp"
-            android:paddingStart="25dp"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
             android:labelFor="@+id/suly"
-            android:text="@string/add_meg"
+            android:text="@string/add_meg_a_sulyt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <EditText
             android:textStyle="italic"
-            android:textSize="16sp"
-            android:hint="@string/add_meg"
+            android:textSize="25sp"
+            android:hint="@string/kilogramm"
             android:id="@id/suly"
             android:inputType="numberDecimal"
             android:layout_width="match_parent"

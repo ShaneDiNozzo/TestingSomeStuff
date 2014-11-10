@@ -6,5 +6,9 @@
     <string name="action_settings">Settings</string>
     <string name="add_meg">Add meg!</string>
     <string name="szamol_gomb">Kiszámít</string>
+    <string name="meter">(m)</string>
+    <string name="kilogramm">(kg)</string>
+    <string name="add_meg_a_magassagot">Add meg a magasságot:</string>
+    <string name="add_meg_a_sulyt">Add meg a súlyt:</string>
 
 </resources>
