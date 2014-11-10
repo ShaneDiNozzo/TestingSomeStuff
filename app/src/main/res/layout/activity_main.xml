@@ -17,7 +17,7 @@
             android:layout_marginBottom="8dp"
             android:textSize="25sp"
             android:paddingStart="15dp"
-            android:paddingEnd="15dp"
+            android:paddingEnd="7dp"
             android:labelFor="@+id/magassag"
             android:text="@string/add_meg_a_magassagot"
             android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
             android:layout_marginBottom="8dp"
             android:textSize="25sp"
             android:paddingStart="15dp"
-            android:paddingEnd="15dp"
+            android:paddingEnd="7dp"
             android:labelFor="@+id/suly"
             android:text="@string/add_meg_a_sulyt"
             android:layout_width="wrap_content"
@@ -69,5 +69,4 @@
             android:onClick="_gombNyomas"/>
 
     </LinearLayout>
-
 </ScrollView>

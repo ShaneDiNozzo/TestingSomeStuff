@@ -14,7 +14,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
+    } //onCreate
 
     public void _gombNyomas(View view) {
         final Context context = getApplicationContext();
@@ -26,15 +26,13 @@ public class MainActivity extends ActionBarActivity {
                 .setPositiveButton(R.string.fire, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Toast.makeText(context, R.string.tuuuuz, Toast.LENGTH_SHORT).show();
-                    }
-                })
+                    } //onClick
+                }) //DialogInterface.OnClickListener
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Toast.makeText(context, R.string.visszavonulas, Toast.LENGTH_SHORT).show();
-                    }
-                });
-        // Create the AlertDialog object and return it
+                    } //OnClick
+                }); //DialogInterface.OnClickListener
         builder.create().show();
-
-    }
-}
+    } //_gombNyomas
+} //MainActivity
