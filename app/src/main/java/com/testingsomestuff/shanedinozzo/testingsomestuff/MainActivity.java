@@ -22,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.dialog_fire_missiles)
-                .setTitle("Működik")
+                .setTitle(R.string.uzenet_cim)
                 .setPositiveButton(R.string.fire, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Toast.makeText(context, R.string.tuuuuz, Toast.LENGTH_SHORT).show();
