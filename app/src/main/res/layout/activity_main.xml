@@ -62,9 +62,11 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/szamitas_gomb"
             android:text="@string/szamol_gomb"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="_gombNyomas"/>
 
     </LinearLayout>
 
