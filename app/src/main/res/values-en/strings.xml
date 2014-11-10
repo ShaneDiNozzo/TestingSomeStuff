@@ -3,7 +3,8 @@
     <string name="app_name">BMI Calculator TestApp</string>
     <string name="szamol_gomb">Calculate</string>
     <string name="meter">(m)</string>
-    <string name="kilogramm">(kg)</string>
+    <string name="kilogram">(kg)</string>
     <string name="add_meg_a_magassagot">Enter height in meters:</string>
-    <string name="add_meg_a_sulyt">Enter weight in kilogramms:</string>
+    <string name="add_meg_a_sulyt">Enter weight in kilograms:</string>
+    <string name="gomb_nyomas">You clicked the button</string>
 </resources>

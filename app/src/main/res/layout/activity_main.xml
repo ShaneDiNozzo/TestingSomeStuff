@@ -50,7 +50,7 @@
         <EditText
             android:textStyle="italic"
             android:textSize="25sp"
-            android:hint="@string/kilogramm"
+            android:hint="@string/kilogram"
             android:id="@id/suly"
             android:inputType="numberDecimal"
             android:layout_width="match_parent"

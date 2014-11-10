@@ -16,6 +16,6 @@ public class MainActivity extends ActionBarActivity {
 
     public void _gombNyomas(View view) {
         Context context = getApplicationContext();
-        Toast.makeText(context, "Megnyomtad a gombot", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, R.string.gomb_nyomas, Toast.LENGTH_SHORT).show();
     }
 }
