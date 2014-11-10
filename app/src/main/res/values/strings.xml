@@ -8,4 +8,9 @@
     <string name="add_meg_a_magassagot">Add meg a magasságot méterben:</string>
     <string name="add_meg_a_sulyt">Add meg a súlyt kilogramban:</string>
     <string name="gomb_nyomas">Megnyomtad a gombot</string>
+    <string name="dialog_fire_missiles">Rakéták?</string>
+    <string name="fire">Tűz!</string>
+    <string name="cancel">Mégse</string>
+    <string name="tuuuuz">Tűűűűűűűűűűűz!</string>
+    <string name="visszavonulas">Visszavonuláááááás!</string>
 </resources>
