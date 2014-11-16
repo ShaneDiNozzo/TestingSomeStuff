@@ -35,7 +35,8 @@ public class MainActivity extends ActionBarActivity {
     public void _toast(String s, String m, float eredmeny) {
 
         Context context = getApplicationContext();
-        Toast.makeText(context, "Magasság:  " + m + "\nSúly:             " + s + "\nBMI:          " + eredmeny, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Magasság:  " + m + "\nSúly:             " + s +
+                "\nBMI:          " + eredmeny, Toast.LENGTH_SHORT).show();
     } //_toast
 
     public float _szamolas(float _suly_, float _magassag_) {
