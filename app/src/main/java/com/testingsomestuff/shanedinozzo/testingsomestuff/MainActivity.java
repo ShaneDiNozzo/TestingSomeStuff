@@ -29,6 +29,7 @@ public class MainActivity extends ActionBarActivity {
     } //onCreate
 
     public void _gombNyomas(View view) {
+        //TODO Figyelmeztessen, ha üresek a mezők!
 
         EditText suly = (EditText) findViewById(R.id.suly);
         float _suly_ = Float.valueOf(suly.getText().toString());
@@ -228,6 +229,7 @@ public class MainActivity extends ActionBarActivity {
                 .setTitle(R.string.uzenet_cim)
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        // Todo Toast törlése, és eredmény kiírása a gomb alá!
 
                         Toast.makeText(context, R.string.tuuuuz, Toast.LENGTH_SHORT).show();
                     } //onClick
