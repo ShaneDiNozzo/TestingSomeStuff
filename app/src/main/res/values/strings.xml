@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">TTI Kalkulátor TesztApp</string>
     <string name="szamol_gomb">Kiszámít</string>
     <string name="meter">(m)</string>
@@ -13,5 +12,7 @@
     <string name="cancel">Mégse</string>
     <string name="tuuuuz">Tűűűűűűűűűűűz!</string>
     <string name="visszavonulas">Visszavonuláááááás!</string>
-    <string name="uzenet_cim">Támadás</string>
+    <string name="uzenet_cim">TTI eredmény</string>
+    <string name="megosztas">Megosztás</string>
+    <string name="megosztoSzoveg">Kiszámoltam a TTI-met a TTI kalkulátor appal. Az eredményem</string>
 </resources>

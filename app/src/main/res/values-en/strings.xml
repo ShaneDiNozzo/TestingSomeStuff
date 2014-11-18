@@ -12,5 +12,7 @@
     <string name="cancel">Cancel</string>
     <string name="tuuuuz">Fireeeeeeeeeee!</string>
     <string name="visszavonulas">Go baaaaaaaaaaaack!</string>
-    <string name="uzenet_cim">Attack</string>
+    <string name="uzenet_cim">BMI result</string>
+    <string name="megosztas">Share</string>
+    <string name="megosztoSzoveg">I calculated my BMI with the BMI Calculator app. My result is</string>
 </resources>
