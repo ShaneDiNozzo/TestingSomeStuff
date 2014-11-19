@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +22,8 @@ public class MainActivity extends ActionBarActivity {
     static String magassag_m;
     static String megosztasEzzel;
     static String tti;
+    static String magassagHiany;
+    static String sulyHiany;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,17 +32,32 @@ public class MainActivity extends ActionBarActivity {
     } //onCreate
 
     public void _gombNyomas(View view) {
-        //TODO Figyelmeztessen, ha üresek a mezők!
 
-        EditText suly = (EditText) findViewById(R.id.suly);
-        float _suly_ = Float.valueOf(suly.getText().toString());
+        final EditText suly = (EditText) findViewById(R.id.suly);
         String s = suly.getText().toString();
-        EditText magassag = (EditText) findViewById(R.id.magassag);
-        float _magassag_ = Float.valueOf(magassag.getText().toString());
+        final EditText magassag = (EditText) findViewById(R.id.magassag);
         String m = magassag.getText().toString();
 
-        _szamolas(_suly_, _magassag_);
         _nyelv();
+        _magassagError(nyelv);
+        _sulyError(nyelv);
+
+        if(TextUtils.isEmpty(m)) {
+
+            magassag.setError(magassagHiany);
+            return;
+        } //if TextUtils
+
+        if(TextUtils.isEmpty(s)) {
+
+            suly.setError(sulyHiany);
+            return;
+        } //if TextUtils
+
+        float _suly_ = Float.valueOf(suly.getText().toString());
+        float _magassag_ = Float.valueOf(magassag.getText().toString());
+
+        _szamolas(_suly_, _magassag_);
         _tti(nyelv);
         _magassag(nyelv);
         _suly(nyelv);
@@ -47,6 +65,32 @@ public class MainActivity extends ActionBarActivity {
         _osztoSzoveg(nyelv);
         _alert(s, m, eredmeny, vegeredmeny, suly_s, magassag_m);
     } //_gombNyomas
+
+    public String _magassagError(String nyelv) {
+
+        if (nyelv.equals("magyar")){
+
+            magassagHiany = "Add meg a magasságot!";
+        } else if (nyelv.equals("angol")) {
+
+            magassagHiany = "Enter the height!";
+        } //if nyelv
+
+        return magassagHiany;
+    } //_magassagError
+
+    public String _sulyError(String nyelv) {
+
+        if (nyelv.equals("magyar")){
+
+            sulyHiany = "Add meg a súlyt!";
+        } else if (nyelv.equals("angol")) {
+
+            sulyHiany = "Enter the weight!";
+        } //if nyelv
+
+        return sulyHiany;
+    } //_sulyError
 
     public float _szamolas(float _suly_, float _magassag_) {
 
@@ -217,7 +261,10 @@ public class MainActivity extends ActionBarActivity {
         return megosztasEzzel;
     } //_megosztasEzzel
 
-    public void _alert(String s, String m, final float eredmeny, final String vegeredmeny, String suly_s, String magassag_m) {
+    public void _alert(String s, String m, final float eredmeny, final String vegeredmeny,
+                       String suly_s, String magassag_m) {
+
+        //TODO Az eredményt 2 tizedesjegyre kell rövidíteni!
 
         _megosztasEzzel(nyelv);
 
@@ -240,7 +287,8 @@ public class MainActivity extends ActionBarActivity {
                         Intent intent = new Intent();
                         intent.setAction(Intent.ACTION_SEND);
                         intent.setType("text/plain");
-                        intent.putExtra(Intent.EXTRA_TEXT, osztoSzoveg + eredmeny + ". " + vegeredmeny);
+                        intent.putExtra(Intent.EXTRA_TEXT, osztoSzoveg + eredmeny +
+                                ". " + vegeredmeny);
                         startActivity(Intent.createChooser(intent, megosztasEzzel));
                     } //OnClick
                 }); //DialogInterface.OnClickListener

@@ -15,4 +15,8 @@
     <string name="uzenet_cim">TTI eredmény</string>
     <string name="megosztas">Megosztás</string>
     <string name="megosztoSzoveg">Kiszámoltam a TTI-met a TTI kalkulátor appal. Az eredményem</string>
+    <string name="sulyHiany">Add meg a súlyt!</string>
+    <string name="sulyHianyCim">Súly</string>
+    <string name="magassagHiany">Add meg a magasságot!</string>
+    <string name="magassagHianyCim">Magasság</string>
 </resources>
