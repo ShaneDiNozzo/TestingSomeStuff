@@ -10,7 +10,10 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.DecimalFormat;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -24,6 +27,7 @@ public class MainActivity extends ActionBarActivity {
     static String tti;
     static String magassagHiany;
     static String sulyHiany;
+    static float decimalEredmeny;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,12 +62,13 @@ public class MainActivity extends ActionBarActivity {
         float _magassag_ = Float.valueOf(magassag.getText().toString());
 
         _szamolas(_suly_, _magassag_);
+        _decimal(eredmeny);
         _tti(nyelv);
         _magassag(nyelv);
         _suly(nyelv);
         _eredmeny(eredmeny);
         _osztoSzoveg(nyelv);
-        _alert(s, m, eredmeny, vegeredmeny, suly_s, magassag_m);
+        _alert(s, m, decimalEredmeny, vegeredmeny, suly_s, magassag_m);
     } //_gombNyomas
 
     public String _magassagError(String nyelv) {
@@ -99,6 +104,14 @@ public class MainActivity extends ActionBarActivity {
 
         return eredmeny;
     } //_szamolas
+
+    public float _decimal(float eredmeny) {
+
+        DecimalFormat df = new DecimalFormat("#.##");
+        decimalEredmeny = Float.parseFloat(df.format(eredmeny));
+
+        return decimalEredmeny;
+    } //_decimal
 
     public String _nyelv() {
 
@@ -261,10 +274,8 @@ public class MainActivity extends ActionBarActivity {
         return megosztasEzzel;
     } //_megosztasEzzel
 
-    public void _alert(String s, String m, final float eredmeny, final String vegeredmeny,
+    public void _alert(String s, String m, final float decimalEredmeny, final String vegeredmeny,
                        String suly_s, String magassag_m) {
-
-        //TODO Az eredményt 2 tizedesjegyre kell rövidíteni!
 
         _megosztasEzzel(nyelv);
 
@@ -272,12 +283,19 @@ public class MainActivity extends ActionBarActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(magassag_m + ": " + m + " m\n" + suly_s + ": " + s +
-                " kg\n" + tti + ": " + eredmeny + "\n" + vegeredmeny)
+                " kg\n" + tti + ": " + decimalEredmeny + "\n" + vegeredmeny)
                 .setTitle(R.string.uzenet_cim)
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        // Todo Toast törlése, és eredmény kiírása a gomb alá!
 
+                        TextView eredmenySzoveg = (TextView) findViewById(R.id.eredmenySzoveg);
+                        TextView eredmenySzam = (TextView) findViewById(R.id.eredmenySzam);
+
+                        DecimalFormat df = new DecimalFormat("#.##");
+                        String decEred = String.valueOf(Float.parseFloat(df.format(eredmeny)));
+
+                        eredmenySzoveg.setText(vegeredmeny);
+                        eredmenySzam.setText(decEred);
                         Toast.makeText(context, R.string.tuuuuz, Toast.LENGTH_SHORT).show();
                     } //onClick
                 }) //DialogInterface.OnClickListener
@@ -287,8 +305,8 @@ public class MainActivity extends ActionBarActivity {
                         Intent intent = new Intent();
                         intent.setAction(Intent.ACTION_SEND);
                         intent.setType("text/plain");
-                        intent.putExtra(Intent.EXTRA_TEXT, osztoSzoveg + eredmeny +
-                                ". " + vegeredmeny);
+                        intent.putExtra(Intent.EXTRA_TEXT, osztoSzoveg + decimalEredmeny  +
+                                ". " + vegeredmeny + ".");
                         startActivity(Intent.createChooser(intent, megosztasEzzel));
                     } //OnClick
                 }); //DialogInterface.OnClickListener
