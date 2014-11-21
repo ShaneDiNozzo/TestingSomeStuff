@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BMI Calculator TestApp</string>
+    <string name="app_name">BMI Calculator</string>
     <string name="szamol_gomb">Calculate</string>
     <string name="meter">(m)</string>
     <string name="kilogram">(kg)</string>
     <string name="add_meg_a_magassagot">Enter height in meters:</string>
     <string name="add_meg_a_sulyt">Enter weight in kilograms:</string>
-    <string name="gomb_nyomas">You clicked the button</string>
-    <string name="dialog_fire_missiles">Rockets?</string>
-    <string name="fire">Fire!</string>
-    <string name="cancel">Cancel</string>
     <string name="tuuuuz">Fireeeeeeeeeee!</string>
-    <string name="visszavonulas">Go baaaaaaaaaaaack!</string>
     <string name="uzenet_cim">BMI result</string>
     <string name="megosztas">Share</string>
-    <string name="megosztoSzoveg">I calculated my BMI with the BMI Calculator app. My result is</string>
 </resources>
